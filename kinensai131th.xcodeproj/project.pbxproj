@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA137A4522EF167B004BAFA3 /* 企画　icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA137A4422EF167B004BAFA3 /* 企画　icon.png */; };
+		BA137A4B22EF197B004BAFA3 /* ホーム　Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA137A4A22EF197A004BAFA3 /* ホーム　Icon.png */; };
+		BA137A4D22EF1B32004BAFA3 /* 地図　icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA137A4C22EF1B32004BAFA3 /* 地図　icon.png */; };
+		BA137A5122EF1C88004BAFA3 /* TT Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = BA137A5022EF1C88004BAFA3 /* TT Icon.png */; };
+		BA137A5522F0580F004BAFA3 /* アプリホーム画面.png in Resources */ = {isa = PBXBuildFile; fileRef = BA137A5422F0580F004BAFA3 /* アプリホーム画面.png */; };
+		BA8C821822DB066800F4F53E /* スクリーンショット 2019-07-14 15.41.54.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8C821722DB066800F4F53E /* スクリーンショット 2019-07-14 15.41.54.png */; };
+		BA8C823822DB444900F4F53E /* 記念祭　女の子のコピー3.png in Resources */ = {isa = PBXBuildFile; fileRef = BA8C823722DB444900F4F53E /* 記念祭　女の子のコピー3.png */; };
+		BA8C823A22DB4D8A00F4F53E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C823922DB4D8A00F4F53E /* MapViewController.swift */; };
+		BA8C823C22DC02F900F4F53E /* Map2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8C823B22DC02F900F4F53E /* Map2ViewController.swift */; };
+		BAB3490B2306CC0000A1E984 /* kurasucell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB3490A2306CC0000A1E984 /* kurasucell.swift */; };
 		BAE01666229815D300560ED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE01665229815D300560ED8 /* AppDelegate.swift */; };
 		BAE01668229815D300560ED8 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE01667229815D300560ED8 /* FirstViewController.swift */; };
 		BAE0166A229815D300560ED8 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE01669229815D300560ED8 /* SecondViewController.swift */; };
@@ -15,6 +25,12 @@
 		BAE01672229815D400560ED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAE01670229815D400560ED8 /* LaunchScreen.storyboard */; };
 		BAE0167D229815D400560ED8 /* kinensai131thTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE0167C229815D400560ED8 /* kinensai131thTests.swift */; };
 		BAE01688229815D400560ED8 /* kinensai131thUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE01687229815D400560ED8 /* kinensai131thUITests.swift */; };
+		BAE0169C22981AAA00560ED8 /* TT.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0169922981AAA00560ED8 /* TT.png */; };
+		BAE0169D22981AAA00560ED8 /* クラス企画.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0169A22981AAA00560ED8 /* クラス企画.png */; };
+		BAE0169E22981AAA00560ED8 /* 地図.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0169B22981AAA00560ED8 /* 地図.png */; };
+		BAE016A022981B7500560ED8 /* 家３.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE0169F22981B7500560ED8 /* 家３.png */; };
+		BAE016A222981C2C00560ED8 /* Button_Coctom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE016A122981C2C00560ED8 /* Button_Coctom.swift */; };
+		BAE016A62298290300560ED8 /* TTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE016A52298290300560ED8 /* TTViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +51,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA137A4422EF167B004BAFA3 /* 企画　icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "企画　icon.png"; path = "../../企画　icon.png"; sourceTree = "<group>"; };
+		BA137A4A22EF197A004BAFA3 /* ホーム　Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ホーム　Icon.png"; sourceTree = "<group>"; };
+		BA137A4C22EF1B32004BAFA3 /* 地図　icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "地図　icon.png"; path = "../../../Downloads/地図　icon.png"; sourceTree = "<group>"; };
+		BA137A5022EF1C88004BAFA3 /* TT Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TT Icon.png"; sourceTree = "<group>"; };
+		BA137A5422F0580F004BAFA3 /* アプリホーム画面.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "アプリホーム画面.png"; path = "../../アプリホーム画面.png"; sourceTree = "<group>"; };
+		BA8C821722DB066800F4F53E /* スクリーンショット 2019-07-14 15.41.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2019-07-14 15.41.54.png"; sourceTree = "<group>"; };
+		BA8C823722DB444900F4F53E /* 記念祭　女の子のコピー3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "記念祭　女の子のコピー3.png"; sourceTree = "<group>"; };
+		BA8C823922DB4D8A00F4F53E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BA8C823B22DC02F900F4F53E /* Map2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map2ViewController.swift; sourceTree = "<group>"; };
+		BAB3490A2306CC0000A1E984 /* kurasucell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = kurasucell.swift; path = ../../../kurasucell.swift; sourceTree = "<group>"; };
 		BAE01662229815D300560ED8 /* kinensai131th.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kinensai131th.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE01665229815D300560ED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAE01667229815D300560ED8 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +75,12 @@
 		BAE01683229815D400560ED8 /* kinensai131thUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kinensai131thUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE01687229815D400560ED8 /* kinensai131thUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kinensai131thUITests.swift; sourceTree = "<group>"; };
 		BAE01689229815D400560ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAE0169922981AAA00560ED8 /* TT.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TT.png; sourceTree = "<group>"; };
+		BAE0169A22981AAA00560ED8 /* クラス企画.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "クラス企画.png"; sourceTree = "<group>"; };
+		BAE0169B22981AAA00560ED8 /* 地図.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "地図.png"; sourceTree = "<group>"; };
+		BAE0169F22981B7500560ED8 /* 家３.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "家３.png"; sourceTree = "<group>"; };
+		BAE016A122981C2C00560ED8 /* Button_Coctom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button_Coctom.swift; sourceTree = "<group>"; };
+		BAE016A52298290300560ED8 /* TTViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +111,17 @@
 		BAE01659229815D300560ED8 = {
 			isa = PBXGroup;
 			children = (
+				BA137A5422F0580F004BAFA3 /* アプリホーム画面.png */,
+				BA137A5022EF1C88004BAFA3 /* TT Icon.png */,
+				BA137A4C22EF1B32004BAFA3 /* 地図　icon.png */,
+				BA137A4A22EF197A004BAFA3 /* ホーム　Icon.png */,
+				BA137A4422EF167B004BAFA3 /* 企画　icon.png */,
+				BA8C823722DB444900F4F53E /* 記念祭　女の子のコピー3.png */,
+				BA8C821722DB066800F4F53E /* スクリーンショット 2019-07-14 15.41.54.png */,
+				BAE0169F22981B7500560ED8 /* 家３.png */,
+				BAE0169922981AAA00560ED8 /* TT.png */,
+				BAE0169A22981AAA00560ED8 /* クラス企画.png */,
+				BAE0169B22981AAA00560ED8 /* 地図.png */,
 				BAE01664229815D300560ED8 /* kinensai131th */,
 				BAE0167B229815D400560ED8 /* kinensai131thTests */,
 				BAE01686229815D400560ED8 /* kinensai131thUITests */,
@@ -99,13 +142,18 @@
 		BAE01664229815D300560ED8 /* kinensai131th */ = {
 			isa = PBXGroup;
 			children = (
+				BAE016A122981C2C00560ED8 /* Button_Coctom.swift */,
 				BAE01665229815D300560ED8 /* AppDelegate.swift */,
 				BAE01667229815D300560ED8 /* FirstViewController.swift */,
 				BAE01669229815D300560ED8 /* SecondViewController.swift */,
+				BAE016A52298290300560ED8 /* TTViewController.swift */,
+				BA8C823922DB4D8A00F4F53E /* MapViewController.swift */,
+				BA8C823B22DC02F900F4F53E /* Map2ViewController.swift */,
 				BAE0166B229815D300560ED8 /* Main.storyboard */,
 				BAE0166E229815D400560ED8 /* Assets.xcassets */,
 				BAE01670229815D400560ED8 /* LaunchScreen.storyboard */,
 				BAE01673229815D400560ED8 /* Info.plist */,
+				BAB3490A2306CC0000A1E984 /* kurasucell.swift */,
 			);
 			path = kinensai131th;
 			sourceTree = "<group>";
@@ -232,8 +280,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAE0169C22981AAA00560ED8 /* TT.png in Resources */,
 				BAE01672229815D400560ED8 /* LaunchScreen.storyboard in Resources */,
+				BA8C821822DB066800F4F53E /* スクリーンショット 2019-07-14 15.41.54.png in Resources */,
+				BA8C823822DB444900F4F53E /* 記念祭　女の子のコピー3.png in Resources */,
+				BA137A5122EF1C88004BAFA3 /* TT Icon.png in Resources */,
+				BAE016A022981B7500560ED8 /* 家３.png in Resources */,
+				BA137A4522EF167B004BAFA3 /* 企画　icon.png in Resources */,
+				BAE0169E22981AAA00560ED8 /* 地図.png in Resources */,
+				BA137A5522F0580F004BAFA3 /* アプリホーム画面.png in Resources */,
+				BA137A4B22EF197B004BAFA3 /* ホーム　Icon.png in Resources */,
 				BAE0166F229815D400560ED8 /* Assets.xcassets in Resources */,
+				BAE0169D22981AAA00560ED8 /* クラス企画.png in Resources */,
+				BA137A4D22EF1B32004BAFA3 /* 地図　icon.png in Resources */,
 				BAE0166D229815D300560ED8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB3490B2306CC0000A1E984 /* kurasucell.swift in Sources */,
 				BAE0166A229815D300560ED8 /* SecondViewController.swift in Sources */,
+				BA8C823A22DB4D8A00F4F53E /* MapViewController.swift in Sources */,
+				BAE016A62298290300560ED8 /* TTViewController.swift in Sources */,
 				BAE01666229815D300560ED8 /* AppDelegate.swift in Sources */,
+				BA8C823C22DC02F900F4F53E /* Map2ViewController.swift in Sources */,
+				BAE016A222981C2C00560ED8 /* Button_Coctom.swift in Sources */,
 				BAE01668229815D300560ED8 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
