@@ -8,8 +8,16 @@
 
 import UIKit
 
-class TTViewController: UIViewController {
+class TTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    typealias Datatype = [(label2: String,label3: String,label4: String)]
+    var TODO: Datatype = [("SAO","9:00","10:30"),("リゼロ","",""), ("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
+    var TODO1: Datatype = [("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
+    var TODO2: Datatype = [("記念祭","9:00","10:30"),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
+    
+    @IBOutlet weak var tableview1: UITableView!
+    @IBOutlet weak var tableview2: UITableView!
+    @IBOutlet weak var tableview3: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
     @IBOutlet var firstView: UIView!
     @IBOutlet var secondView: UIView!
@@ -17,6 +25,7 @@ class TTViewController: UIViewController {
     @IBOutlet var fourthview: UIView!
     @IBOutlet var fivthview: UIView!
     @IBOutlet var sixthview: UIView!
+    private var frag: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +33,22 @@ class TTViewController: UIViewController {
         // Do any additional setup after loading the view.
         
          self.view.addSubview(firstView)
+    }
+    
+    @IBAction func segment(_ sender:Any){
+        
+        switch(sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            frag = 0
+            tableview1.reloadData()
+            break
+        case 1:
+            frag = 1
+            tableview2.reloadData()
+            break
+        default:
+            print("エラー")
+        }
     }
     
     @IBAction func segmentControl(_ sender: UISegmentedControl) {
@@ -109,6 +134,57 @@ class TTViewController: UIViewController {
         self.view.addSubview(sixthview)
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        switch frag {
+        case 0:
+            return TODO.count
+            break
+        case 1:
+            return TODO2.count
+            break
+        default:
+            break
+        }
+        return 0
+    }
+    
+    //追加④ セルに値を設定するデータソースメソッド（必須）
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell: UITableViewCell!
+        switch frag {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell11", for: indexPath) as! SampleCell1
+            //            // セルを取得する
+            //            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+            //            //データをカンマで分割する。
+            //            let arr = TODO[indexPath.row].components(separatedBy: ",")
+            //            cell.textLabel?.text = arr[0] //タイトル
+            //            cell.detailTextLabel?.text = arr[1]
+            //            // セルに表示する値を設定する
+            //            cell.textLabel!.text = TODO[indexPath.row]
+            cell.label2.text = TODO[indexPath.row].label2
+            cell.label3.text = TODO[indexPath.row].label3
+            cell.label4.text = TODO[indexPath.row].label4
+            
+            return cell
+            break
+        case 1:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell12", for: indexPath) as! SampleCell1
+            // セルを取得する
+//            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell12", for: indexPath)
+//            // セルに表示する値を設定する
+//            cell.textLabel!.text = TODO2[indexPath.row]
+            cell.label2.text = TODO2[indexPath.row].label2
+            cell.label3.text = TODO2[indexPath.row].label3
+            cell.label4.text = TODO2[indexPath.row].label4
+            return cell
+            break
+            
+        default:
+            break
+        }
+        return cell
+    }
 
     /*
     // MARK: - Navigation

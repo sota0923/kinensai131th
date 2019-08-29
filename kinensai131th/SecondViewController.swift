@@ -11,9 +11,9 @@ import UIKit
 class SecondViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
     
     typealias Datatype = [(label1: String,label2: String)]
-    var TODO: Datatype = [("H1-A","SAO"),("H1-B",""), ("H1-C",""),("H1-D",""),("H1-E",""),("H1-F",""),("H1-G",""),("H1-H",""),("H1-I",""),("H1-J",""),("H1-K","")]
+    var TODO: Datatype = [("1年A組","SAO"),("1年B組","リゼロ"), ("1年C組",""),("1年D組",""),("1年E組",""),("1年F組",""),("1年G組",""),("1年H組",""),("1年I組",""),("1年J組",""),("1年K組","")]
     var TODO1: Datatype = [("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("",""),("","")]
-    let TODO2 = ["H2-A","H2-B","H2-C","H2-D","H2-E","H2-F","H2-G","H2-H","H2-I","H2-J","H2-K"]
+    var TODO2: Datatype = [("1年A組",""),("1年B組",""),("1年C組",""),("1年D組",""),("1年E組",""),("1年F組",""),("1年G組",""),("1年H組",""),("1年I組",""),("1年J組","")]
     
     @IBOutlet weak var tableview1: UITableView!
     @IBOutlet weak var tableview2: UITableView!
@@ -26,6 +26,8 @@ class SecondViewController: UIViewController , UITableViewDelegate, UITableViewD
     @IBOutlet var fivthview: UIView!
     @IBOutlet var sixthview: UIView!
     private var frag: Int = 0
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,10 +172,13 @@ class SecondViewController: UIViewController , UITableViewDelegate, UITableViewD
             return cell
             break
         case 1:
-            // セルを取得する
-            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+             let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! SampleCell1
+//            // セルを取得する
+//            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
             // セルに表示する値を設定する
-            cell.textLabel!.text = TODO2[indexPath.row]
+//            cell.textLabel!.text = TODO2[indexPath.row]
+            cell.label1.text = TODO2[indexPath.row].label1
+            cell.label2.text = TODO2[indexPath.row].label2
             return cell
             break
     
@@ -182,6 +187,8 @@ class SecondViewController: UIViewController , UITableViewDelegate, UITableViewD
         }
         return cell
     }
+    
+
 
 
 }
