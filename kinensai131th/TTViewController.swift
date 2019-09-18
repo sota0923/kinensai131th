@@ -10,181 +10,154 @@ import UIKit
 
 class TTViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    typealias Datatype = [(label2: String,label3: String,label4: String)]
-    var TODO: Datatype = [("SAO","9:00","10:30"),("リゼロ","",""), ("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
-    var TODO1: Datatype = [("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
-    var TODO2: Datatype = [("記念祭","9:00","10:30"),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","",""),("","","")]
     
-    @IBOutlet weak var tableview1: UITableView!
-    @IBOutlet weak var tableview2: UITableView!
-    @IBOutlet weak var tableview3: UITableView!
+    var displayArray: [String] = []
+    var displayArray1: [String] = []
+    var displayArray2: [String] = []
+    
+    var highSchool1: [String] = ["light boys", "TKB", "KIT", "TKB", "TKB", "light boys", "TKB", "TKB", "TKB", "TKB", "TKB"]
+    var highSchool2: [String] = ["light boys", "TKB", "KIT", "TKB", "TKB", "TKB", "TKB", "light boys", "TKB", "TKB", "TKB"]
+    var highSchool3: [String] = ["9:00", "10::30", "11:00", "12:00", "13:00", "13:30", "14:00", "15:00", "15:30", "16:00",""]
+    var highSchool4: [String] = ["10:20", "10::50", "11:50", "12:50", "13:20", "13:50", "14:50", "15:20", "15:50", "16:20",""]
+    var highSchool5: [String] = ["9:00", "10::30", "11:00", "12:00", "13:00", "13:30", "14:00", "15:00", "15:30", "16:00",""]
+    var highSchool6: [String] = ["10:20", "10::50", "11:50", "12:50", "13:20", "13:50", "14:50", "15:20", "15:50", "16:20",""]
+    
+    var juniorHighSchool1: [String] = ["light boys", "TKB", "KIT", "TKB", "TKB", "TKB", "TKB", "TKB", "TKB", "TKB", "TKB"]
+    var juniorHighSchool2: [String] = ["light boys", "TKB", "KIT", "TKB", "TKB", "TKB", "TKB", "light boys", "TKB", "TKB", "TKB"]
+    var juniorHighSchool3: [String] = ["9:00", "10::30", "11:00", "12:00", "13:00", "13:30", "14:00", "15:00", "15:30", "16:00",""]
+    var juniorHighSchool4: [String] = ["10:20", "10::50", "11:50", "12:50", "13:20", "13:50", "14:50", "15:20", "15:50", "16:20",""]
+    var juniorHighSchool5: [String] = ["9:00", "10::30", "11:00", "12:00", "13:00", "13:30", "14:00", "15:00", "15:30", "16:00",""]
+    var juniorHighSchool6: [String] = ["10:20", "10::50", "11:50", "12:50", "13:20", "13:50", "14:50", "15:20", "15:50", "16:20",""]
+    
+    var index: Int = 0
+    // 中学か高校かのフラグ
+    var divisionFlag: Int = 0
+    // 学年のフラグ
+    var gradeFlag: Int = 0
+    
+    @IBOutlet weak var table: UITableView!
     @IBOutlet weak var segment: UISegmentedControl!
-    @IBOutlet var firstView: UIView!
-    @IBOutlet var secondView: UIView!
-    @IBOutlet var tirthview: UIView!
-    @IBOutlet var fourthview: UIView!
-    @IBOutlet var fivthview: UIView!
-    @IBOutlet var sixthview: UIView!
-    private var frag: Int = 0
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        table.delegate = self
+        table.dataSource = self
         
-         self.view.addSubview(firstView)
+        // デフォで中一が表示される
+        displayArray = juniorHighSchool1
+        displayArray1 = juniorHighSchool3
+        displayArray2 = juniorHighSchool5
     }
     
-    @IBAction func segment(_ sender:Any){
-        
-        switch(sender as AnyObject).selectedSegmentIndex {
+    @IBAction func first() {
+        switch divisionFlag {
         case 0:
-            frag = 0
-            tableview1.reloadData()
-            break
-        case 1:
-            frag = 1
-            tableview2.reloadData()
-            break
-        default:
-            print("エラー")
-        }
-    }
-    
-    @IBAction func segmentControl(_ sender: UISegmentedControl) {
-        
-        switch sender.selectedSegmentIndex {
+            displayArray = juniorHighSchool1
+            displayArray1 = juniorHighSchool3
+            displayArray2 = juniorHighSchool5
             
-        case 0:
-            // Firstをタップされた時に実行される処理
-            addFirstView()
         case 1:
-            // Secondをタップされた時に実行される処理
-            addSecondView()
+            displayArray = highSchool1
+            displayArray1 = highSchool3
+            displayArray2 = highSchool5
+            
         default:
-            // デフォルトで実行される処理
-            addFirstView()
+            break
         }
-        
+        gradeFlag = 1
+        table.reloadData()
     }
     
-    // SecondViewをViewから削除し、FirstViewをViewに追加する
-    func addFirstView() {
-        secondView.removeFromSuperview()
-        self.view.addSubview(firstView)
+    @IBAction func second() {
+        switch divisionFlag {
+        case 0:
+            displayArray = juniorHighSchool2
+            displayArray1 = juniorHighSchool4
+            displayArray2 = juniorHighSchool6
+            
+        case 1:
+            displayArray = highSchool2
+            displayArray1 = highSchool4
+            displayArray2 = highSchool6
+            
+            
+        default:
+            break
+        }
+        gradeFlag = 2
+        table.reloadData()
     }
     
-    // FirstViewをViewから削除し、SecondViewをViewに追加する
-    func addSecondView() {
-        firstView.removeFromSuperview()
-        self.view.addSubview(secondView)
+    
+    
+    @IBAction func segment(_ sender: Any) {
+        switch (sender as AnyObject).selectedSegmentIndex {
+        case 0:
+            divisionFlag = 0
+            gradeFlag = 1
+            displayArray = juniorHighSchool1
+            displayArray1 = juniorHighSchool3
+            displayArray2 = juniorHighSchool5
+        case 1:
+            divisionFlag = 1
+            gradeFlag = 2
+            displayArray = highSchool1
+            displayArray1 = highSchool3
+            displayArray2 = highSchool5
+        default:
+            break
+        }
+        table.reloadData()
     }
     
-    @IBAction func high1(){
-        firstView.removeFromSuperview()
-        self.view.addSubview(firstView)
-        tirthview.removeFromSuperview()
-        self.view.addSubview(firstView)
-        fourthview.removeFromSuperview()
-        self.view.addSubview(firstView)
-    }
-    
-    @IBAction func high2(){
-        tirthview.removeFromSuperview()
-        self.view.addSubview(tirthview)
-        firstView.removeFromSuperview()
-        self.view.addSubview(tirthview)
-        fourthview.removeFromSuperview()
-        self.view.addSubview(tirthview)
-    }
-    
-    @IBAction func high3(){
-        fourthview.removeFromSuperview()
-        self.view.addSubview(fourthview)
-        firstView.removeFromSuperview()
-        self.view.addSubview(fourthview)
-        tirthview.removeFromSuperview()
-        self.view.addSubview(fourthview)
-    }
-    
-    @IBAction func ST1(){
-        secondView.removeFromSuperview()
-        self.view.addSubview(secondView)
-        fivthview.removeFromSuperview()
-        self.view.addSubview(secondView)
-        sixthview.removeFromSuperview()
-        self.view.addSubview(secondView)
-    }
-    
-    @IBAction func ST2(){
-        fivthview.removeFromSuperview()
-        self.view.addSubview(fivthview)
-        secondView.removeFromSuperview()
-        self.view.addSubview(fivthview)
-        sixthview.removeFromSuperview()
-        self.view.addSubview(fivthview)
-    }
-    
-    @IBAction func ST3(){
-        sixthview.removeFromSuperview()
-        self.view.addSubview(sixthview)
-        secondView.removeFromSuperview()
-        self.view.addSubview(sixthview)
-        fivthview.removeFromSuperview()
-        self.view.addSubview(sixthview)
-    }
-    
+    //-------------------------------------------------------------------------------テーブルビューの設定
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch frag {
-        case 0:
-            return TODO.count
-            break
-        case 1:
-            return TODO2.count
-            break
-        default:
-            break
-        }
-        return 0
+        return displayArray.count
     }
     
-    //追加④ セルに値を設定するデータソースメソッド（必須）
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell: UITableViewCell!
-        switch frag {
-        case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell11", for: indexPath) as! SampleCell1
-            //            // セルを取得する
-            //            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-            //            //データをカンマで分割する。
-            //            let arr = TODO[indexPath.row].components(separatedBy: ",")
-            //            cell.textLabel?.text = arr[0] //タイトル
-            //            cell.detailTextLabel?.text = arr[1]
-            //            // セルに表示する値を設定する
-            //            cell.textLabel!.text = TODO[indexPath.row]
-            cell.label2.text = TODO[indexPath.row].label2
-            cell.label3.text = TODO[indexPath.row].label3
-            cell.label4.text = TODO[indexPath.row].label4
-            
-            return cell
-            break
-        case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell12", for: indexPath) as! SampleCell1
-            // セルを取得する
-//            let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell12", for: indexPath)
-//            // セルに表示する値を設定する
-//            cell.textLabel!.text = TODO2[indexPath.row]
-            cell.label2.text = TODO2[indexPath.row].label2
-            cell.label3.text = TODO2[indexPath.row].label3
-            cell.label4.text = TODO2[indexPath.row].label4
-            return cell
-            break
-            
-        default:
-            break
-        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
+        
+        let label1 = cell.contentView.viewWithTag(1) as! UILabel
+        label1.text = displayArray[indexPath.row]
+        
+        let label2 = cell.contentView.viewWithTag(2) as! UILabel
+        label2.text = displayArray1[indexPath.row]
+        
+        let label3 = cell.contentView.viewWithTag(3) as! UILabel
+        label3.text = displayArray2[indexPath.row]
+        
         return cell
     }
+    //-------------------------------------------------------------------------------テーブルビューの設定
+    
+    // セルがタップされた時
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // セルの選択を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+        // cellの番号を取得
+        index = indexPath.row
+        // 別の画面に遷移
+        performSegue(withIdentifier: "toSecond", sender: nil)
+    }
+    
+    // 画面遷移する時，secondViewControllerへindexを渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecond" {
+            let secondVC = segue.destination as! detail1ViewController
+            secondVC.index = self.index
+            secondVC.divisionFlag = self.divisionFlag
+            secondVC.gradeFlag = self.gradeFlag
+        }
+    }
+    
+    
+    
 
     /*
     // MARK: - Navigation

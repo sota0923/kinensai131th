@@ -32,7 +32,7 @@ class Map2ViewController: UIViewController, CLLocationManagerDelegate {
         addAnnotation(35.1800,136.9303, "ステージ", "記念祭ステージ会場")
         addAnnotation(35.1801,136.9295, "講堂", "記念祭講堂企画")
         addAnnotation(35.1799,136.9290, "高校校舎", "記念祭高校クラス企画会場")
-        addAnnotation(35.1804,136.9289, "中学校舎", "記念祭つ中学クラス企画会場")
+        addAnnotation(35.1804,136.9289, "中学校舎", "記念祭中学クラス企画会場")
         addAnnotation(35.1801,136.9287, "中庭", "記念祭中庭会場")
         
         //CLLocationManagerをインスタンス化
@@ -71,6 +71,8 @@ class Map2ViewController: UIViewController, CLLocationManagerDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+   
     
 
     /*
